@@ -14,4 +14,16 @@ https://www.udemy.com/course/spring-hibernate-tutorial/learn/lecture/36829934#ov
 - Setter injection
 - Use this when you have optional dependencies, if dependency is not provided, your app can provide reasonable default logic
 
-  ^ this appears to be something of a heuristic 
+#### Qualifiers / Primary
+- When multiple implementations of an interface exist, Spring can't resolve which bean to inject and throws `NoUniqueBeanDefinitionException`
+- `@Qualifier` — specify exactly which implementation to inject by bean name
+  - Annotate at the injection point (constructor param, setter, or field)
+  - Bean name defaults to the class name with the first letter lowercased (e.g. `CricketCoach` → `cricketCoach`)
+- `@Primary` — mark one implementation as the default choice when no qualifier is given
+  - Only one bean per type may be marked `@Primary` (multiple defeats the purpose and errors out)
+
+##### Qualifier vs. Primary — which to use?
+- `@Primary` lets the *bean* declare itself the default — one decision, applied everywhere
+- `@Qualifier` lets the *injection point* choose — more specific, decided per use
+- If both are present, `@Qualifier` wins (specific beats general)
+- Prefer `@Qualifier` when you need explicit control; prefer `@Primary` for a sensible app-wide default
