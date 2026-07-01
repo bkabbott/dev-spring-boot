@@ -34,3 +34,5 @@ build/
 
 ### Windows Zone.Identifier (mark-of-the-web) ###
 *:Zone.Identifier
+*:Zone*Identifier
+*.Identifier
