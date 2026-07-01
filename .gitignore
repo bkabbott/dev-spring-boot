@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Windows Zone.Identifier (mark-of-the-web) ###
+*:Zone.Identifier
