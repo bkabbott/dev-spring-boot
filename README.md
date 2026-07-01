@@ -27,3 +27,15 @@ https://www.udemy.com/course/spring-hibernate-tutorial/learn/lecture/36829934#ov
 - `@Qualifier` lets the *injection point* choose — more specific, decided per use
 - If both are present, `@Qualifier` wins (specific beats general)
 - Prefer `@Qualifier` when you need explicit control; prefer `@Primary` for a sensible app-wide default
+
+#### Bean Scopes
+- scope refers to bean's lifecycle
+- Default scope is singleton
+  - Creates only one instance of the bean by default
+- Explicitly specify Bean Scope
+  - singleton
+  - prototype
+  - request
+  - session
+  - application
+  - websocket 
