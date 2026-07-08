@@ -4,6 +4,8 @@ import com.luv2code.cruddemo.entity.Student;
 
 public interface StudentDAO {
 
-    abstract void save(Student student);
+    void save(Student student);
+
+    Student findById(Integer id);
 
 }
