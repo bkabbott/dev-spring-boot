@@ -12,6 +12,6 @@ public interface EmployeeService {
 
     Employee save(Employee theEmployee);
 
-    void deleteById(int theId);s
+    void deleteById(int theId);
 
 }
